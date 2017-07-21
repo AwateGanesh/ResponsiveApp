@@ -1,0 +1,73 @@
+<html>
+<head>
+    <link rel="stylesheet"  href="stylesheets/app.css">
+    <link rel="stylesheet"  href="stylesheets/expense.css">
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+</head>
+
+<body>
+
+<div ng-app="myApp" ng-controller="appCtrl">
+
+
+    <div class="row">
+    <div class="app-left-col" ng-class="{'col-lg-2 col-md-3 col-sm-2 col-xs-2 wide':isExpanded,'col-lg-1 col-md-1 col-sm-1 col-xs-1 narrow':!isExpanded}">
+
+            <div>
+                <div class="toggle menuItem" ng-click="toggleMenu()">
+                    <i class="fa fa-bars menuIcon"></i>
+                    <span class="menuLabel" ng-class="{'fadeOutLabel':!isExpanded,'fadeInLabel ':isExpanded}">My Expense Manager</span>
+                </div>
+            </div>
+            <div class="profilePicture" ng-class="{'fadeInImage':isExpanded,'fadeOutImage ':!isExpanded}">
+                <img src="images/my_photos.png">
+            </div>
+
+          <!--  <div class="designationBlock" ng-class="{'fadeInDesig':isExpanded,'fadeOutDesig':!isExpanded}">
+                <p>Ganesh Awate</p>
+                <p>Web Developer</p>
+             </div>-->
+
+        <ul class="menuList">
+            <li ng-repeat="item in menuItems"  ng-click="loadPage(item.itemId)" ng-class="getClass(item.itemId)">
+                <div class="menuItem">
+                    <i class="fa {{item.icon}} menuIcon" title="{{item.label}}">
+                    </i>
+                    <span class="menuLabel" ng-class="{'fadeOutLabel':!isExpanded,'fadeInLabel ':isExpanded}">{{item.label}}</span>
+                </div>
+            </li>
+        </ul>
+
+
+
+
+    </div>
+
+    <div class="app-right-col  col-lg-10 col-md-9 col-sm-10 col-xs-10">
+
+        <div class="" ng-view></div>
+
+    </div>
+    </div>
+
+
+
+
+
+    <div class="portfolio-footer">
+        <div class="footerText">All rights reserverd &copy; 2017</div>
+    </div>
+</div>
+
+
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="node_modules/angular-route/angular-route.js"></script>
+<script src="scripts/routes.js"></script>
+<script src="scripts/services/tabService.js"></script>
+<script src="scripts/appcontroller.js"></script>
+</html>

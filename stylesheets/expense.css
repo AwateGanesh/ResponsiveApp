@@ -1,0 +1,9 @@
+.historyPage{margin: 0 !important; padding: 0 !important;}
+.headerText{font-size: 1.6rem;}
+.pageHeader{padding: 15px 0px 15px 20px;background: #555;color: white;}
+
+.pieChartBlock{}
+.barChartBlock{}
+.totalExpense{}
+
+.section{border: 1px solid;margin: 25px 40px 25px 40px; height: 250px;}

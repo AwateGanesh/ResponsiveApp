@@ -1,0 +1,55 @@
+body{font-family: 'Crimson Text',serif !important;}
+.row{margin:0px !important;padding:0px !important;}
+
+.portfolio-footer{width:100%;position:fixed !important;bottom:0px;font-size:1.5rem;!important;text-align:center;}
+.footerText{background: #2C404C;color: white;padding: 5px 15px 5px 0px;}
+
+
+ul,li {list-style-type: none;margin: 0; padding: 0;}
+.menuList{color:white;padding-top: 15px;}
+.toggle{background:#31708f;color:white;font-size:20px;}
+
+.menuIcon{padding:0px 10px 0px 5px;text-align:center;width:60px;}
+.menuLabel{opacity:0;display:inline-block;display:none;position:absolute;left:65;}
+.menuItem{cursor: pointer;border-bottom: 1px solid rgba(238, 238, 238, 0.09);padding: 15px 0px 15px 0px;font-size: 1.6rem;}
+.menuList li:hover{background-color:rgba(8, 110, 135, 0.32)}
+.menuList .selected{background-color: #086e87;}
+
+
+.profilePicture{text-align: center;padding: 20px 10px 30px 0;}
+.profilePicture img{border-radius:85px;height: 120px;}
+
+.app-left-col{background: #1B2A33;margin: 0 !important; padding: 0 !important;position:fixed;bottom:0;left:0;height:100%}
+.narrow {width:4% !important;transition: width 0.3s;transition-delay:0.2s;}
+.wide {transition: width 0.3s;}
+
+.fadeOutImage{animation:fadeOut forwards;animation-duration:0.3s; display:none}
+.fadeInImage{animation:fadeIn forwards;animation-duration:0.3s;}
+
+.fadeOutLabel{animation:fadeOut forwards;animation-duration:0.2s;}
+.fadeInLabel{animation:fadeIn forwards;animation-duration:0.2s;display:inline-block;}
+
+
+.fadeInDesig{animation:fadeIn forwards;animation-duration:0.2s;}
+.fadeOutDesig{animation:fadeOut forwards;animation-duration:0.2s;display:none}
+
+.designationBlock{color: white;
+                      font-size: 1.8rem;
+                      text-align: center;
+                      padding: 10px 0 5px 0;
+                      border-top: 1px solid;
+                      border-bottom: 1px solid;
+                      box-shadow: 0px 1px 20px #eee;
+                      background: rgba(49, 112, 143, 0)}
+
+
+@keyframes fadeIn {0% {opacity: 0;} 50% {opacity: 0.5;} 100% {opacity: 1;}}
+@keyframes fadeOut{0% {opacity: 1;} 50% {opacity: 0.5;} 100% {opacity: 0;}}
+
+
+@media only screen and (min-width:1024px){
+.profilePicture img {height: auto;}
+}
+
+
+.app-right-col{margin: 0 !important; padding: 0 !important;}
